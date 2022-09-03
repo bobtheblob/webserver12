@@ -7,7 +7,8 @@ app.get('/charlist', function(request, response) {
 	response.send(JSON.stringify(myArray));
 });
 app.post('/setchar', function(request, response) {
-	const json_decode = JSON.parse(request.body)
+	//console.log(request.body);
+	const json_decode = request.body
 	const theyExist = false
 	myArray.forEach((v, i, array) => {
 		if (v.userid == json_decode.userid) {
